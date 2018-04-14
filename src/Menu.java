@@ -25,8 +25,16 @@ public class Menu {
         switch (answer) {
             case "1": {
                 System.out.println("Podaj liczby które chcesz pomnożyć oddzielone przecinkiem:");
+                String[] args = scanner.nextLine().split(",");
+                int length = args.length;
+                logic.lenghtOfArgs(length);
+                System.out.println(logic.toString());
 
-                
+                for (int i = 0; i < args.length; i++) {
+                    logic.addArg(i, Double.valueOf(args[i]));
+                }
+
+
                 break;
 
             }
