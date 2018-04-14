@@ -3,9 +3,12 @@ import java.util.Scanner;
 public class Menu {
     private Scanner scanner;
     private MenuLogic logic;
+    private Binary binary;
 
     public Menu(){
         scanner = new Scanner(System.in);
+        logic = new MenuLogic();
+        binary = new Binary();
     }
 
     public void start() {
@@ -26,14 +29,26 @@ public class Menu {
             case "1": {
                 System.out.println("Podaj liczby które chcesz pomnożyć oddzielone przecinkiem:");
                 String[] args = scanner.nextLine().split(",");
-                int length = args.length;
-                logic.lenghtOfArgs(length);
+
+                logic.lenghtOfArgs(args.length);
                 System.out.println(logic.toString());
 
                 for (int i = 0; i < args.length; i++) {
                     logic.addArg(i, Double.valueOf(args[i]));
                 }
 
+
+                break;
+
+
+            }
+            case "2": {
+
+            }
+            case "3": {
+                System.out.println("Podaj liczbe do konwersji");
+
+                System.out.println(binary.changeToBinar(Integer.valueOf(scanner.nextLine())));
 
                 break;
 
