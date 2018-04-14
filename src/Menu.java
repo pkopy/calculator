@@ -61,8 +61,8 @@ public class Menu {
         System.out.println();
         System.out.println("1 - mnożenie,");
         System.out.println("2 - dzielenie,");
-        System.out.println("3 - zamiana typu binarnego na dzisiętny,");
-        System.out.println("4 - zamiana typu dzisiętnego na binarny,");
+        System.out.println("3 - zamiana typu dzisiętnego na binarny,");
+        System.out.println("4 - zamiana typu binarnego na dziesiętny,");
         System.out.println("5 - zamiana typu binarnego na ósemkowy");
         System.out.println("6 - pierwiastek x z liczby y");
 
