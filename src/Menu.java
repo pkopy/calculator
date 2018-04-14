@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Menu {
     private Scanner scanner;
+    private MenuLogic logic;
 
     public Menu(){
         scanner = new Scanner(System.in);
@@ -23,6 +24,10 @@ public class Menu {
     public void checkAnswer(String answer) {
         switch (answer) {
             case "1": {
+                System.out.println("Podaj liczby które chcesz pomnożyć oddzielone przecinkiem:");
+
+                
+                break;
 
             }
         }
