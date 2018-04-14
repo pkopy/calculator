@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class Menu {
     private Scanner scanner;
     private MenuLogic logic;
-    private Binary binary;
+    private BinaryConverter binary;
 
     public Menu(){
         scanner = new Scanner(System.in);
         logic = new MenuLogic();
-        binary = new Binary();
+        binary = new BinaryConverter();
     }
 
     public void start() {
@@ -52,6 +52,11 @@ public class Menu {
 
                 break;
 
+            }
+            case "4": {
+                System.out.println("Podaj liczbe do konwersji");
+                System.out.println(binary.changeToDecimal(scanner.nextLine()));
+                break;
             }
         }
 
