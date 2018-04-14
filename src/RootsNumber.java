@@ -5,7 +5,7 @@ public class RootsNumber {
 
     }
 
-    public boolean rootsNumber( int x, int y) {
-        
+    public double rootsNumber( double x, double y) {
+        return Math.pow(x, 1/y);
     }
 }

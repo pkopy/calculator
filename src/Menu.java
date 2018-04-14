@@ -4,11 +4,13 @@ public class Menu {
     private Scanner scanner;
     private MenuLogic logic;
     private BinaryConverter binary;
+    private RootsNumber roots;
 
     public Menu(){
         scanner = new Scanner(System.in);
         logic = new MenuLogic();
         binary = new BinaryConverter();
+        roots = new RootsNumber();
     }
 
     public void start() {
@@ -57,6 +59,16 @@ public class Menu {
                 System.out.println("Podaj liczbe do konwersji");
                 System.out.println(binary.changeToDecimal(scanner.nextLine()));
                 break;
+            }
+
+            case "6": {
+                System.out.println("Podaj stopień pierwiastka");
+                int degree = Integer.valueOf(scanner.nextLine());
+                System.out.println("Podaj liczbę");
+                int root = Integer.valueOf(scanner.nextLine());
+                System.out.println(roots.rootsNumber(root, degree));
+
+
             }
         }
 

@@ -23,7 +23,7 @@ public class BinaryConverter {
         return reverseString(result);
     }
 
-    public String reverseString(String string) {
+    public static String reverseString(String string) {
         String result = "";
         for (int i = string.length() - 1; i >= 0; i--) {
             result += string.charAt(i);
