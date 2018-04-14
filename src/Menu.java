@@ -5,12 +5,14 @@ public class Menu {
     private MenuLogic logic;
     private BinaryConverter binary;
     private RootsNumber roots;
+    private OctalConvertor octal;
 
     public Menu(){
         scanner = new Scanner(System.in);
         logic = new MenuLogic();
         binary = new BinaryConverter();
         roots = new RootsNumber();
+        octal = new OctalConvertor();
     }
 
     public void start() {
@@ -54,6 +56,11 @@ public class Menu {
 
                 break;
 
+            }
+            case "5": {
+                System.out.println("Podaj liczbe do konwersji");
+                System.out.println(octal.binaryToOctal(scanner.nextLine()));
+                break;
             }
             case "4": {
                 System.out.println("Podaj liczbe do konwersji");

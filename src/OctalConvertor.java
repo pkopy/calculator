@@ -15,10 +15,9 @@ public class OctalConvertor {
             decimal = decimal / 8;
             result += i;
         } while (decimal / 8 != 0);
-        if (decimal % 2 == 1) {
+        if (decimal % 8 == 1) {
             result += 1;
         }
-
 
         return binary.reverseString(result);
     }
