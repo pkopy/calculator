@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class Menu {
     private Scanner scanner;
-    private MenuLogic logic;
+    private SimpleMath simpleMath;
     private BinaryConverter binary;
     private RootsNumber roots;
     private OctalConverter octal;
 
     public Menu(){
         scanner = new Scanner(System.in);
-        logic = new MenuLogic();
+        simpleMath = new SimpleMath();
         binary = new BinaryConverter();
         roots = new RootsNumber();
         octal = new OctalConverter();
@@ -33,16 +33,16 @@ public class Menu {
         switch (answer) {
             case "1": {
                 System.out.println("Podaj liczby które chcesz pomnożyć oddzielone przecinkiem:");
-                logic.changeStringToArray(scanner.nextLine(), ",");
-                System.out.println(logic.multiply(logic.getMultiplyArgs()));
+                simpleMath.changeStringToArray(scanner.nextLine(), ",");
+                System.out.println(simpleMath.multiply(simpleMath.getMultiplyArgs()));
 
                 break;
             }
 
             case "2": {
                 System.out.println("Podaj dzielną i dzielnik oddzielone przecinkiem:");
-                logic.changeStringToArray(scanner.nextLine(),",");
-                System.out.println(logic.divine(logic.getMultiplyArgs()));
+                simpleMath.changeStringToArray(scanner.nextLine(),",");
+                System.out.println(simpleMath.divine(simpleMath.getMultiplyArgs()));
                 break;
 
 
