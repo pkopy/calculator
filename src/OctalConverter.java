@@ -1,7 +1,7 @@
 public class OctalConverter {
     private BinaryConverter binary;
 
-    public OctalConverter() {
+    OctalConverter() {
         binary = new BinaryConverter();
     }
 
