@@ -21,10 +21,11 @@ public class Menu {
         String answer;
 
         do{
-            System.out.println("Wybierz opcję: ");
 
+            System.out.println("Wybierz opcję: ");
             printChoseList();
             checkAnswer(answer = scanner.nextLine());
+
         }while(!answer.equalsIgnoreCase("exit"));
     }
 
@@ -41,27 +42,26 @@ public class Menu {
                     logic.addArg(i, Double.valueOf(args[i]));
                 }
 
-
                 break;
-
-
             }
+
             case "2": {
+                System.out.println("Podaj dzielną i dzielnik");
 
             }
+
             case "3": {
                 System.out.println("Podaj liczbe do konwersji");
-
                 System.out.println(binary.changeToBinar(Integer.valueOf(scanner.nextLine())));
-
                 break;
-
             }
+
             case "5": {
                 System.out.println("Podaj liczbe do konwersji");
                 System.out.println(octal.binaryToOctal(scanner.nextLine()));
                 break;
             }
+
             case "4": {
                 System.out.println("Podaj liczbe do konwersji");
                 System.out.println(binary.changeToDecimal(scanner.nextLine()));
@@ -74,8 +74,7 @@ public class Menu {
                 System.out.println("Podaj liczbę");
                 int root = Integer.valueOf(scanner.nextLine());
                 System.out.println(roots.rootsNumber(root, degree));
-
-
+                break;
             }
         }
 
