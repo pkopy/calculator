@@ -5,14 +5,14 @@ public class Menu {
     private MenuLogic logic;
     private BinaryConverter binary;
     private RootsNumber roots;
-    private OctalConvertor octal;
+    private OctalConverter octal;
 
     public Menu(){
         scanner = new Scanner(System.in);
         logic = new MenuLogic();
         binary = new BinaryConverter();
         roots = new RootsNumber();
-        octal = new OctalConvertor();
+        octal = new OctalConverter();
     }
 
     public void start() {
