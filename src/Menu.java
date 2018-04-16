@@ -29,24 +29,22 @@ public class Menu {
         }while(!answer.equalsIgnoreCase("exit"));
     }
 
-    public void checkAnswer(String answer) {
+    private void checkAnswer(String answer) {
         switch (answer) {
             case "1": {
                 System.out.println("Podaj liczby które chcesz pomnożyć oddzielone przecinkiem:");
-                String[] args = scanner.nextLine().split(",");
-
-                logic.lenghtOfArgs(args.length);
-                System.out.println(logic.toString());
-
-                for (int i = 0; i < args.length; i++) {
-                    logic.addArg(i, Double.valueOf(args[i]));
-                }
+                logic.changeStringToArray(scanner.nextLine(), ",");
+                System.out.println(logic.multiply(logic.getMultiplyArgs()));
 
                 break;
             }
 
             case "2": {
-                System.out.println("Podaj dzielną i dzielnik");
+                System.out.println("Podaj dzielną i dzielnik oddzielone przecinkiem:");
+                logic.changeStringToArray(scanner.nextLine(),",");
+                System.out.println(logic.divine(logic.getMultiplyArgs()));
+                break;
+
 
             }
 
@@ -80,7 +78,7 @@ public class Menu {
 
     }
 
-    public void printChoseList() {
+    private void printChoseList() {
         System.out.println();
         System.out.println("1 - mnożenie,");
         System.out.println("2 - dzielenie,");

@@ -27,7 +27,6 @@ public class BinaryConverter {
         String result = "";
         for (int i = string.length() - 1; i >= 0; i--) {
             result += string.charAt(i);
-
         }
         return result;
     }
@@ -39,16 +38,13 @@ public class BinaryConverter {
         for (int i = 0; i < binary.length(); i++) {
             int a = reversString.charAt(i);
             if (a == 48) {
-                result += 0 * x;
+                result += 0;
             } else {
-                result += 1 * x;
+                result += x;
             }
             x *= 2;
         }
 
         return result;
-
     }
-
-
 }
